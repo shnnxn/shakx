@@ -25,8 +25,7 @@ def encryption_box(binary_list, hkey = None):
     xor_key_blist = int(binary_list[i], 2)^int(key, 2) #xored
     encrypting = bin(xor_key_blist)[2:].zfill(len(binary_list[1]))    #xored encryption
     ct_blist.append(encrypting)
-    ct_dec.append(int(ct_blist[i], 2))
-    ct.append(chr(ct_dec[i]))
   print("cipher text : ")
-  print ct
+  import pdb;pdb.set_trace()
+  print ''.join(ct_blist)
 
